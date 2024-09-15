@@ -127,12 +127,12 @@ Contact Information
     },
   ]
 
-  const runFile = (fileName) => {
-    const file = files.find(f => f.name === fileName)
-    if (file) {
-      setTerminalText(`$ ${fileName === 'about.py' ? 'python' : fileName === 'skills.js' ? 'node' : 'npm run'} ${fileName}\n\n${file.output}\n\n`)
+  const runFile = (fileName: string) => {
+  const file = files.find(f => f.name === fileName)
+  if (file) {
+    setTerminalText(`$ ${fileName === 'about.py' ? 'python' : fileName === 'skills.js' ? 'node' : 'npm run'} ${fileName}\n\n${file.output}\n\n`)
     }
-  }
+  }  
 
   if (loading) {
     return (
